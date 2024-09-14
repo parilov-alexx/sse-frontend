@@ -3,7 +3,7 @@ export default class Request {
   allTickets() {
     return new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
-      xhr.open('GET', 'http://localhost:7070/?method=allTickets');
+      xhr.open('GET', 'https://sse-backend-tl9s.onrender.com/?method=allTickets');
       xhr.addEventListener('load', () => {
         if (xhr.status >= 200 && xhr.status < 300) {
           try {
@@ -23,7 +23,7 @@ export default class Request {
       const xhr = new XMLHttpRequest();
       const params = new URLSearchParams();
       params.append('id', id);
-      xhr.open('GET', `http://localhost:7070/?method=ticketById&id=${id}`);
+      xhr.open('GET', `https://sse-backend-tl9s.onrender.com/?method=ticketById&id=${id}`);
       xhr.addEventListener('load', () => {
         if (xhr.status >= 200 && xhr.status < 300) {
           try {
@@ -44,7 +44,7 @@ export default class Request {
       params.append('name', name);
       params.append('description', description);
       const xhr = new XMLHttpRequest();
-      xhr.open('POST', 'http://localhost:7070/?method=createTicket');
+      xhr.open('POST', 'https://sse-backend-tl9s.onrender.com/?method=createTicket');
       xhr.addEventListener('load', () => {
         if (xhr.status >= 200 && xhr.status < 300) {
           try {
@@ -64,7 +64,7 @@ export default class Request {
       const xhr = new XMLHttpRequest();
       const params = new URLSearchParams();
       params.append('id', id);
-      xhr.open('DELETE', `http://localhost:7070/?method=removeById&id=${id}`);
+      xhr.open('DELETE', `https://sse-backend-tl9s.onrender.com/?method=removeById&id=${id}`);
       xhr.addEventListener('load', () => {
         if (xhr.status >= 200 && xhr.status < 300) {
           try {
@@ -86,7 +86,7 @@ export default class Request {
       params.append('id', id);
       params.append('name', name);
       params.append('description', description);
-      xhr.open('POST', `http://localhost:7070/?method=editTicket&id=${id}`);
+      xhr.open('POST', `https://sse-backend-tl9s.onrender.com/?method=editTicket&id=${id}`);
       xhr.addEventListener('load', () => {
         if (xhr.status >= 200 && xhr.status < 300) {
           try {
@@ -107,7 +107,7 @@ export default class Request {
       const params = new URLSearchParams();
       params.append('id', id);
       params.append('status', status);
-      xhr.open('POST', `http://localhost:7070/?method=checkTicket&id=${id}`);
+      xhr.open('POST', `https://sse-backend-tl9s.onrender.com/?method=checkTicket&id=${id}`);
       xhr.addEventListener('load', () => {
         if (xhr.status >= 200 && xhr.status < 300) {
           try {
