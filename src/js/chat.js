@@ -4,7 +4,7 @@ export default class Chat {
     this.activeId = null;
     this.name = null;
     this.active = null;
-    this.ws = new WebSocket('ws:https://sse-backend-tl9s.onrender.com/');
+    this.ws = new WebSocket('wss:https://sse-backend-tl9s.onrender.com/');
   }
 
   start(contacts) {
