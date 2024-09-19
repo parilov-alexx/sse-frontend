@@ -1,3 +1,4 @@
+
 export default class ChatWindow {
   constructor(parentEl) {
     if (!parentEl) {

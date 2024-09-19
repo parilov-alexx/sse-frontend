@@ -4,6 +4,7 @@ export default class Chat {
     this.activeId = null;
     this.name = null;
     this.active = null;
+    //this.ws = new WebSocket('ws:localhost:7070');
     this.ws = new WebSocket('wss:sse-backend-tl9s.onrender.com/ws');
   }
 
@@ -65,10 +66,6 @@ export default class Chat {
       const {
         id, name, active, status,
       } = item;
-
-      if (name === 'Ivan') {
-        this.idIvan = id;
-      }
 
       let checked;
       let nickName;
@@ -153,6 +150,7 @@ export default class Chat {
 
     if (this.ws.readyState === WebSocket.OPEN) {
       this.ws.send(data);
+      
     }
 
     this.ws.addEventListener('message', (event) => {
